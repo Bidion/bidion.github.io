@@ -2,33 +2,98 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-sca0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <style>
-    a {
-color: black;
-display: block;
-
+<style>
+    .navbar {
+        display: flex;
+        background-color: darkcyan;
+        width: 100%;
+                justify-content: space-between;   
+                            align-items: center;   
+                            position: fixed;    
     }
+.menu {
+
+}
+.firs {
+    justify-content: space-between;
+}
+body {
+    margin: 0;
+}
+.logo {
+    color: gold;
+    padding: 1em;
+font-weight: bold;
+font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.menu a {
+    padding: 1em;
+    color: honeydew;
+    text-decoration: none;
+    font-weight: bold;
+
+}
+.firs, .secon, .thir {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.firs {
+    background-color: indigo;
+}
+.secon {
+    background-color: lawngreen;
+}
+.thir {
+    background-color: firebrick;
+}
+.container {
     
-        
-        body {
-            background-color: steelblue;
-        }
-        
-        </style>
-   
+    border: 20px solid yellow;
+    padding: 100px;
+    border-radius: 5px;
+    transition: all ease .3s;
 
-
-   
+}
+.container:hover {
+    box-shadow: 6px 6px;
+    transform: translate(-4px, -4px);
+}
+html {
+    scroll-behavior: smooth;
+}
+</style>
 </head>
-<body> 
+<body>
     
-   <a href="link.html">pervoye</a> 
-   <a href="task.html">второе</a>
-   <a href="task1.html">третье</a>
-   <a href="task3.html">chetvertoe</a>
-   <a href="my page.html">Страничка</a>
+    <div class="navbar">
+        <div class="logo">
+       Logo
+        </div>
+        <div class="menu">
+            <a href="#Home">Home</a>
+            <a href="#Question">Question</a>
+            <a href="#Aboutme">About me</a>
+        </div>
+    </div>
+    <div class="firs" id="Home">
+<div class="container">
+        <a href="home.html"> Home</a>
+        
+    </div>
+    </div>
+    <div class="secon" id="Question">
+<div class="container">
+<a href="quest.html">Question</a>   </div>
+    </div>
+    <div class="thir" id="Aboutme">
+<div class="container">
+    <a href="about.html"> About me</a> </div>
+    </div>
 </body>
+
 </html>
