@@ -5,95 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-<style>
-    .navbar {
-        display: flex;
-        background-color: darkcyan;
-        width: 100%;
-                justify-content: space-between;   
-                            align-items: center;   
-                            position: fixed;    
-    }
-.menu {
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: lightseagreen;
+        }
+        .newyear {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-direction: column;
+            width: 300px;
+            height: 400px;
+            background-color: lightyellow;
+            border: 20px solid indigo;
+            border-radius: 5px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .text {
+         padding:.5em .75em ;   
+        }
+        .snowflake {
+            background-image: url('snowflake.png');
+            background-size: cover;
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            top: -50px;
 
-}
-.firs {
-    justify-content: space-between;
-}
-body {
-    margin: 0;
-}
-.logo {
-    color: gold;
-    padding: 1em;
-font-weight: bold;
-font-family: Georgia, 'Times New Roman', Times, serif;
-}
-.menu a {
-    padding: 1em;
-    color: honeydew;
-    text-decoration: none;
-    font-weight: bold;
+        }
+        @keyframes falling {
+            to {
+                top: 100vh;
 
+                transform: rotate(720deg);
+            }
+        }
+.snowflake:nth-child(1) {
+    left: 9vw;
+    animation: falling 18s .1s linear infinite;
 }
-.firs, .secon, .thir {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.firs {
-    background-color: indigo;
-}
-.secon {
-    background-color: lawngreen;
-}
-.thir {
-    background-color: firebrick;
-}
-.container {
-    
-    border: 20px solid yellow;
-    padding: 100px;
-    border-radius: 5px;
-    transition: all ease .3s;
-
-}
-.container:hover {
-    box-shadow: 6px 6px;
-    transform: translate(-4px, -4px);
-}
-html {
-    scroll-behavior: smooth;
-}
-</style>
+    </style>
 </head>
 <body>
+    <div class="snowflake"></div>
+<div class="newyear">
+    <h1>Happy New Year</h1>
+    <span class="text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi a aliquid eius ipsa numquam vero autem dicta cupiditate dolore, animi officia quo alias impedit nisi? Cupiditate incidunt sit quo fugit?
+    </span>
+</div>
     
-    <div class="navbar">
-        <div class="logo">
-       Logo
-        </div>
-        <div class="menu">
-            <a href="#Home">Home</a>
-            <a href="#Question">Question</a>
-            <a href="#Aboutme">About me</a>
-        </div>
-    </div>
-    <div class="firs" id="Home">
-<div class="container">
-        <a href="home.html"> Home</a>
-        
-    </div>
-    </div>
-    <div class="secon" id="Question">
-<div class="container">
-<a href="quest.html">Question</a>   </div>
-    </div>
-    <div class="thir" id="Aboutme">
-<div class="container">
-    <a href="about.html"> About me</a> </div>
-    </div>
+    
 </body>
-
 </html>
