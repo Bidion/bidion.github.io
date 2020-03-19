@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+let words = ['beacon','crowd','dwarf'];
+let word = words[Math.floor(Math.random() * words.length)];
+let template = [];
+for (let i = 0; i < word.length; i++) {
+    template.push('_');
+}
+console.log(template)
+let remainLetters = word.length
+
+alert('Privet ya zagadal slovo sostoyaschee iz' + remainLetters + 'bukv,poprobui ugadai!')
+
+while (remainLetters > 0) {
+    alert(template.join(' '));
+    let guess = prompt('Vveddite bukvu: ')
+    if (guess === null) {
+        break;
+    } else if (guess.length !== 1) {
+        alert('Ne vvodite odnu bukvu');
+    } else {
+        for (const key in word) {
+            if (word[key] === guess) {
+                template[key] = guess;
+                remainLetters--;
+
+            }
+        }
+    }
+    
+    
+}
+alert(template.join(""));
+alert("Pshel nafig " + word)
+    </script>
+    
+</body>
+</html>
